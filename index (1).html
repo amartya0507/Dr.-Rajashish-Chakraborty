@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Rajashish Chakraborty — Respiratory Medicine &amp; Chest Disease Specialist</title>
+<meta name="description" content="Dr. Rajashish Chakraborty, MBBS, FCPS, MD, FCCP (USA) — Respiratory Medicine &amp; Chest Disease Specialist. Practice locations, chamber hours, and official contact desks in Dhaka.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:      #F5F6F3;
+    --tint:       #EDF2EF;
+    --ink:        #16262B;
+    --ink-soft:   #3C4A47;
+    --slate:      #5B6E68;
+    --line:       #DCE3DE;
+    --teal:       #2D6A6E;
+    --teal-deep:  #1E4A4D;
+    --max: 1080px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation: none !important; transition: none !important; }
+  }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3{
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  a{ color: inherit; }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- Skip link ---------- */
+  .skip-link{
+    position: absolute;
+    left: -999px;
+    top: auto;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 20px;
+    z-index: 100;
+  }
+  .skip-link:focus{
+    left: 16px;
+    top: 16px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(245, 246, 243, 0.92);
+    backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .brand{
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .brand strong{ font-weight: 600; }
+  nav ul{
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    margin: 0;
+    padding: 0;
+  }
+  nav a{
+    text-decoration: none;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    position: relative;
+    padding: 4px 0;
+  }
+  nav a:hover, nav a:focus-visible{ color: var(--teal-deep); }
+  nav a::after{
+    content: "";
+    position: absolute;
+    left: 0; right: 100%;
+    bottom: -2px;
+    height: 1px;
+    background: var(--teal);
+    transition: right 0.25s ease;
+  }
+  nav a:hover::after, nav a:focus-visible::after{ right: 0; }
+
+  .menu-toggle{
+    display: none;
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    width: 40px; height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: var(--ink);
+    position: relative;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .menu-toggle span::before{ position: absolute; top: -6px; }
+  .menu-toggle span::after{ position: absolute; top: 6px; }
+  .menu-toggle[aria-expanded="true"] span{ background: transparent; }
+  .menu-toggle[aria-expanded="true"] span::before{ transform: rotate(45deg); top: 0; }
+  .menu-toggle[aria-expanded="true"] span::after{ transform: rotate(-45deg); top: 0; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding: 96px 32px 80px;
+    text-align: center;
+    opacity: 0;
+    animation: rise 0.7s ease forwards;
+  }
+  @keyframes rise{
+    from{ opacity: 0; transform: translateY(10px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+  .portrait{
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    margin: 0 auto 32px;
+    background: linear-gradient(160deg, #E4EAE6, #CFDAD5);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--slate);
+    font-family: 'Source Serif 4', serif;
+    font-size: 2.4rem;
+  }
+  .hero h1{
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    line-height: 1.25;
+    max-width: 640px;
+    margin: 0 auto 10px;
+  }
+  .credential-line{
+    font-size: 0.98rem;
+    color: var(--slate);
+    letter-spacing: 0.01em;
+    margin-bottom: 18px;
+  }
+  .specialty-title{
+    display: inline-block;
+    font-size: 1.05rem;
+    color: var(--teal-deep);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{ padding: 76px 0; }
+  section:nth-of-type(even){ background: var(--tint); }
+  .section-head{
+    display: grid;
+    grid-template-columns: minmax(0,340px) 1fr;
+    gap: 48px;
+    margin-bottom: 44px;
+  }
+  .section-head h2{
+    font-size: 1.7rem;
+  }
+  .section-head p{
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 14px 0 0;
+  }
+
+  /* ---------- About ---------- */
+  .about-body{
+    display: grid;
+    grid-template-columns: minmax(0,340px) 1fr;
+    gap: 48px;
+  }
+  .about-body p{
+    max-width: 62ch;
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+  }
+  .about-body p:last-child{ margin-bottom: 0; }
+
+  /* ---------- Credentials ---------- */
+  .cred-list{
+    border-top: 1px solid var(--line);
+  }
+  .cred-item{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .cred-item .cred-figure{
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.6rem;
+    color: var(--teal-deep);
+  }
+  .cred-item .cred-label{
+    font-size: 0.98rem;
+    color: var(--slate);
+    margin-top: 4px;
+  }
+  .cred-item h3{
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .cred-item p{
+    margin: 0;
+    color: var(--ink-soft);
+    max-width: 58ch;
+  }
+
+  /* ---------- Locations ---------- */
+  .locations-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .location-card{
+    background: var(--paper);
+    padding: 30px 26px 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  .location-card .top-rule{
+    height: 2px;
+    width: 36px;
+    background: var(--teal);
+    margin-bottom: 20px;
+  }
+  .location-card h3{
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+  }
+  .location-card .loc-type{
+    font-size: 0.82rem;
+    color: var(--slate);
+    margin-bottom: 20px;
+  }
+  .loc-field{ margin-bottom: 16px; }
+  .loc-field:last-child{ margin-bottom: 0; margin-top: auto; padding-top: 16px; }
+  .loc-field .field-label{
+    font-size: 0.76rem;
+    color: var(--slate);
+    margin-bottom: 4px;
+  }
+  .loc-field .field-value{
+    font-size: 0.94rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .loc-field .field-value a{
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .loc-field .field-value a:hover{ border-color: var(--teal); }
+  .desk-note{
+    font-size: 0.82rem;
+    color: var(--slate);
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    max-width: 62ch;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding: 44px 0 40px;
+    border-top: 1px solid var(--line);
+  }
+  .footer-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer-col{ max-width: 46ch; }
+  footer p{ margin: 0 0 8px; color: var(--slate); font-size: 0.86rem; }
+  footer .disclaimer{ color: var(--ink-soft); }
+  footer .fine{ font-size: 0.78rem; color: var(--slate); margin-top: 20px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px){
+    .locations-grid{ grid-template-columns: 1fr; }
+    .section-head, .about-body{ grid-template-columns: 1fr; gap: 20px; }
+    .cred-item{ grid-template-columns: 100px 1fr; gap: 20px; }
+  }
+
+  @media (max-width: 720px){
+    .nav-row{ padding: 16px 20px; }
+    nav{
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      display: none;
+    }
+    nav.open{ display: block; }
+    nav ul{
+      flex-direction: column;
+      gap: 0;
+      padding: 8px 20px 20px;
+    }
+    nav ul li{ border-bottom: 1px solid var(--line); }
+    nav ul li:last-child{ border-bottom: none; }
+    nav a{ display: block; padding: 14px 0; }
+    .menu-toggle{ display: flex; }
+    .wrap{ padding: 0 20px; }
+    .hero{ padding: 64px 20px 56px; }
+    section{ padding: 56px 0; }
+    .cred-item{ grid-template-columns: 1fr; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="nav-row">
+    <a class="brand" href="#top">Dr. Rajashish <strong>Chakraborty</strong></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span>
+    </button>
+    <nav id="siteNav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#locations">Practice Locations</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="portrait" role="img" aria-label="Portrait placeholder for Dr. Rajashish Chakraborty">RC</div>
+    <h1>Dr. Rajashish Chakraborty</h1>
+    <p class="credential-line">MBBS (DMC) &middot; FCPS (Medicine) &middot; MD (Chest Diseases) &middot; FCCP (USA)</p>
+    <p class="specialty-title">Respiratory Medicine &amp; Chest Disease Specialist</p>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="about-body">
+        <h2>About</h2>
+        <div>
+          <p>Dr. Rajashish Chakraborty is a senior consultant in respiratory medicine, with over two decades dedicated to the diagnosis and long-term management of chest and lung disease. His practice covers the full spectrum of pulmonary care, from chronic conditions such as asthma and COPD to complex respiratory infections and interstitial lung disease.</p>
+          <p>Trained in Bangladesh and certified internationally through the American College of Chest Physicians, he combines rigorous clinical assessment with a calm, patient-first approach — a reputation built over years of consultation across Dhaka's leading hospitals and diagnostic centres.</p>
+          <p>He consults exclusively through the chamber schedules listed below; all appointments and enquiries are handled by hospital front desks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Credentials &amp; Experience</h2>
+        <p>A career built on formal specialisation in internal medicine and chest disease, followed by international fellowship in the United States.</p>
+      </div>
+
+      <div class="cred-list">
+        <div class="cred-item">
+          <div>
+            <div class="cred-figure">25+</div>
+            <div class="cred-label">years in practice</div>
+          </div>
+          <div>
+            <h3>Clinical experience</h3>
+            <p>Over twenty-five years of continuous clinical practice in internal medicine and respiratory care, across hospital and diagnostic-centre settings in Dhaka.</p>
+          </div>
+        </div>
+
+        <div class="cred-item">
+          <div>
+            <div class="cred-figure">FCCP</div>
+            <div class="cred-label">USA fellowship</div>
+          </div>
+          <div>
+            <h3>International fellowship</h3>
+            <p>Fellow of the American College of Chest Physicians (FCCP), reflecting advanced, internationally benchmarked training in pulmonary and critical care medicine.</p>
+          </div>
+        </div>
+
+        <div class="cred-item">
+          <div>
+            <div class="cred-figure">MD</div>
+            <div class="cred-label">chest diseases</div>
+          </div>
+          <div>
+            <h3>Subspecialty qualification</h3>
+            <p>MD in Chest Diseases, held alongside FCPS (Medicine), providing dual grounding in general internal medicine and dedicated pulmonology.</p>
+          </div>
+        </div>
+
+        <div class="cred-item">
+          <div>
+            <div class="cred-figure">MBBS</div>
+            <div class="cred-label">Dhaka Medical College</div>
+          </div>
+          <div>
+            <h3>Foundational training</h3>
+            <p>Undergraduate medical degree from Dhaka Medical College (DMC), one of Bangladesh's oldest and most established medical institutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="locations">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Practice Locations</h2>
+        <p>Consultations are held by appointment at the chambers below. Please contact the relevant hospital desk directly to schedule or confirm a visit.</p>
+      </div>
+
+      <div class="locations-grid">
+
+        <div class="location-card">
+          <div class="top-rule"></div>
+          <h3>Popular Diagnostic Centre</h3>
+          <p class="loc-type">Consultation Chamber</p>
+
+          <div class="loc-field">
+            <div class="field-label">Address</div>
+            <div class="field-value">House 16, Road 2, Dhanmondi, Dhaka&nbsp;1205</div>
+          </div>
+          <div class="loc-field">
+            <div class="field-label">Visiting hours</div>
+            <div class="field-value">Sunday – Thursday<br>5:00 PM – 8:00 PM</div>
+          </div>
+          <div class="loc-field">
+            <div class="field-label">Chamber desk</div>
+            <div class="field-value"><a href="tel:+880248117501">+880&nbsp;2&nbsp;481&nbsp;175&nbsp;01</a></div>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <div class="top-rule"></div>
+          <h3>Samorita Hospital</h3>
+          <p class="loc-type">Consultation Chamber</p>
+
+          <div class="loc-field">
+            <div class="field-label">Address</div>
+            <div class="field-value">15/1 Panthapath, Farmgate, Dhaka&nbsp;1215</div>
+          </div>
+          <div class="loc-field">
+            <div class="field-label">Visiting hours</div>
+            <div class="field-value">Saturday, Monday, Wednesday<br>6:00 PM – 9:00 PM</div>
+          </div>
+          <div class="loc-field">
+            <div class="field-label">Chamber desk</div>
+            <div class="field-value"><a href="tel:+880296611234">+880&nbsp;2&nbsp;966&nbsp;112&nbsp;34</a></div>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <div class="top-rule"></div>
+          <h3>Green Life Medical College Hospital</h3>
+          <p class="loc-type">Consultation Chamber</p>
+
+          <div class="loc-field">
+            <div class="field-label">Address</div>
+            <div class="field-value">32 Green Road, Dhanmondi, Dhaka&nbsp;1205</div>
+          </div>
+          <div class="loc-field">
+            <div class="field-label">Visiting hours</div>
+            <div class="field-value">Tuesday, Friday<br>4:30 PM – 7:00 PM</div>
+          </div>
+          <div class="loc-field">
+            <div class="field-label">Chamber desk</div>
+            <div class="field-value"><a href="tel:+880296123456">+880&nbsp;2&nbsp;961&nbsp;234&nbsp;56</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="desk-note">All numbers listed are official hospital or diagnostic-centre reception desks. Appointment scheduling, rescheduling, and general enquiries are handled entirely by chamber staff — no personal contact details are published or required.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-col">
+        <p class="disclaimer">This website is provided for general information about Dr. Rajashish Chakraborty's clinical practice and does not constitute medical advice. Always consult a qualified physician for diagnosis and treatment of any medical condition.</p>
+      </div>
+      <div class="footer-col">
+        <p>&copy; <span id="year"></span> Dr. Rajashish Chakraborty. All rights reserved.</p>
+        <p class="fine">Designed for professional medical practice.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('siteNav');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
